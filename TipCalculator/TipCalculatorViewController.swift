@@ -26,6 +26,7 @@ class TipCalculatorViewController: UIViewController, UITextFieldDelegate {
     //MARK:- View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         amountBeforeTextField.text = String(format: "%0.2f", arguments: [tipCalc.amountBeforeTax])
         tipPercentageLabel.text = String(format: "Tip %d%%:", arguments: [Int(tipCalc.tipPercentage * 100)])
     }
